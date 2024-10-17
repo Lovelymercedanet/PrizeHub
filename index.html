@@ -16,7 +16,7 @@
     <div class="app">
       <div class="app-wrapper">
         <img src="./dice-cube.svg" />
-        <p>Вы уже участвуете в этом розыгрыше</p>
+        <p>Поздравляю, Вы участвуете в розыгрыше</p>
       </div>
     </div>
 
@@ -26,10 +26,10 @@
 
       webApp.ready();
 
-      Telegram.WebApp.MainButton.setText("CLOSE WEBVIEW")
+      Telegram.WebApp.MainButton.setText("Закрыть")
         .show()
         .onClick(function () {
-          webviewClose();
+          webApp.close();
         });
 
       console.log(webApp.initDataUnsafe);
