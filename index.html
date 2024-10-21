@@ -11,11 +11,28 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"
+      integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
   <body>
     <div class="app">
       <div class="app-wrapper">
-        <img src="./dice-cube.svg" />
+        <div id="animation">
+          <script>
+            let animation = bodymovin.loadAnimation({
+              container: document.getElementById("animation"),
+              path: "./dice_cube_animation.json",
+              render: "svg",
+              loop: true,
+              autoplay: true,
+              name: "dice-cube",
+            });
+          </script>
+        </div>
         <p>Вы участвуете в этом розыгрыше</p>
       </div>
     </div>
